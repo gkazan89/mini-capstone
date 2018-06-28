@@ -24,7 +24,8 @@ class GuitarsController < ApplicationController
   end
 
   def fret_method
-    @guitar = Guitar.first
+    num = params["variable"]
+    @guitar = Guitar.find_by(id:"#{num}")
     render "instrument.json.jbuilder"
   end
 end
