@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/fender_url" => "guitars#fender_method"
   get "/gibson_url" => "guitars#gibson_method"
   get "/epi_url" => "guitars#epi_method"
+  get "/fret_url" => "guitars#fret_method"
 end

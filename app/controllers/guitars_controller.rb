@@ -22,4 +22,9 @@ class GuitarsController < ApplicationController
     @guitar = Guitar.third
     render "instrument.json.jbuilder"
   end
+
+  def fret_method
+    @guitar = Guitar.first
+    render "instrument.json.jbuilder"
+  end
 end
