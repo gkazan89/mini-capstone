@@ -3,7 +3,7 @@ class GuitarsController < ApplicationController
     render json: {hello: "dr owl"}
   end
 
-  def guitar_method
+  def index
     @guitars = Guitar.all
     render "guitars.json.jbuilder"
   end

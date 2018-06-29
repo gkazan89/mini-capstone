@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/gibson_url" => "guitars#gibson_method"
   get "/epi_url" => "guitars#epi_method"
   get "/fret_url/:variable" => "guitars#fret_method"
+  get "/guitars" => "guitars#index"
 end
