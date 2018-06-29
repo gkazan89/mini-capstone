@@ -1,4 +1,4 @@
-json.name @guitars.name
-json.price @guitars.price
-json.image_url @guitars.image_url
-json.description @guitars.description
+json.name @guitar.name
+json.price @guitar.price
+json.image_url @guitar.image_url
+json.description @guitar.description
