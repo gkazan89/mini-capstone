@@ -8,6 +8,11 @@ class GuitarsController < ApplicationController
     render "guitars.json.jbuilder"
   end
 
+  def show 
+    @guitars = Guitar.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
+
   def fender_method
     @guitar = Guitar.first
     render "instrument.json.jbuilder"

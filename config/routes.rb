@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/epi_url" => "guitars#epi_method"
   get "/fret_url/:variable" => "guitars#fret_method"
   get "/guitars" => "guitars#index"
+  post "/guitars" => "guitars#create"
+  get "/guitars/:id" => "guitars#show"
 end
