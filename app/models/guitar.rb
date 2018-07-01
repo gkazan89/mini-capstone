@@ -1,6 +1,6 @@
 class Guitar < ApplicationRecord
   def is_discounted
-    true if price < 2
+    price < 2
   end
 
   def tax

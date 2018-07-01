@@ -5,7 +5,7 @@ class GuitarsController < ApplicationController
 
   def index
     @guitars = Guitar.all
-    render "guitars.json.jbuilder"
+    render "index.json.jbuilder"
   end
 
   def show 
