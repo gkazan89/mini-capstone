@@ -1,3 +1,4 @@
+json.id @guitar.id
 json.name @guitar.name
 json.price @guitar.price
 json.image_url @guitar.image_url

@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "/hello_url" => "guitars#hello_method"
-  get "/guitars_url" => "guitars#guitar_method"
-  get "/fender_url" => "guitars#fender_method"
-  get "/gibson_url" => "guitars#gibson_method"
-  get "/epi_url" => "guitars#epi_method"
-  get "/fret_url/:variable" => "guitars#fret_method"
   get "/guitars" => "guitars#index"
-  post "/guitar" => "guitars#create"
-  get "/guitar/:id" => "guitars#show"
+  post "/guitars" => "guitars#create"
+  get "/guitars/:id" => "guitars#show"
   patch "/guitars/:id" => "guitars#update"
+  delete "/guitars/:id" => "guitars#destroy"
 end
