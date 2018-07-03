@@ -20,8 +20,12 @@ class GuitarsController < ApplicationController
         image_url: params[:image_url],
         description: params[:description],
       )
-    @guitar.save
-    render "show.json.jbuilder"
+
+    if @guitar.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @guitar.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -30,8 +34,11 @@ class GuitarsController < ApplicationController
     @guitar.price = params[:price]  || @guitar.price
     @guitar.image_url = params[:image_url] || @guitar.image_url
     @guitar.description = params[:description] || @guitar.description
-    @guitar.save
-    render "show.json.jbuilder"
+    if @guitar.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @guitar.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
