@@ -6,4 +6,5 @@ json.description guitar.description
 json.is_discounted guitar.is_discounted
 json.total guitar.total
 json.tax guitar.tax
+json.supplier_id guitar.supplier_id
 json.message "Rock on!"
