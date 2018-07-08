@@ -1,5 +1,6 @@
 class Image < ApplicationRecord
-  def guitars
-    Guitar.where(product_id: id)
-  end
+
+  belongs_to :guitar
+
+  
 end

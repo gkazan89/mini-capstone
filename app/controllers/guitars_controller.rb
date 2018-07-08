@@ -17,11 +17,12 @@ class GuitarsController < ApplicationController
     @guitar = Guitar.new(
         name: params[:name],
         price: params[:price],
-        image_url: params[:image_url],
         description: params[:description],
       )
 
     if @guitar.save
+      image = Image.new(url: params[:image_url], product_id: @guitar.id)
+      image.save
       render "show.json.jbuilder"
     else
       render json: {errors: @guitar.errors.full_messages}, status: :unprocessable_entity
@@ -32,7 +33,6 @@ class GuitarsController < ApplicationController
     @guitar = Guitar.find_by(id: params[:id])
     @guitar.name = params[:name] || @guitar.name
     @guitar.price = params[:price]  || @guitar.price
-    @guitar.image_url = params[:image_url] || @guitar.image_url
     @guitar.description = params[:description] || @guitar.description
     if @guitar.save
       render "show.json.jbuilder"

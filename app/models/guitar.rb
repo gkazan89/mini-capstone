@@ -6,13 +6,9 @@ class Guitar < ApplicationRecord
     price < 2
   end
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  belongs_to :supplier
 
-  def image
-    Image.where(product_id: id)
-  end
+  has_many :images
 
   def tax
     price * 0.09
