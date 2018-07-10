@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get "/guitars/:id" => "guitars#show"
   patch "/guitars/:id" => "guitars#update"
   delete "/guitars/:id" => "guitars#destroy"
+
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
