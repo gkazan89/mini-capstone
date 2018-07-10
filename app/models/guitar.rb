@@ -8,6 +8,8 @@ class Guitar < ApplicationRecord
 
   belongs_to :supplier
 
+  has_many :order
+
   has_many :images
 
   def tax
