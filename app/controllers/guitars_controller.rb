@@ -1,4 +1,7 @@
 class GuitarsController < ApplicationController
+
+  before_action :authenticate_admin, except: [:index, :show]
+
   def hello_method
     render json: {hello: "dr owl"}
   end
