@@ -8,6 +8,10 @@ class Guitar < ApplicationRecord
 
   belongs_to :supplier
 
+  has_many :categories
+
+  belongs_to :category
+
   has_many :order
 
   has_many :images
