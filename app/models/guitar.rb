@@ -8,7 +8,9 @@ class Guitar < ApplicationRecord
 
   belongs_to :supplier
 
-  has_many :categories
+  has_many :category_guitars
+
+  has_many :categories, through: :category_guitars
 
   belongs_to :category
 
