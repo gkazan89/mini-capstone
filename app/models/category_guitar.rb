@@ -1,0 +1,2 @@
+class CategoryGuitar < ApplicationRecord
+end
