@@ -1,4 +1,4 @@
-class GuitarsController < ApplicationController
+class Api::GuitarsController < ApplicationController
 
   before_action :authenticate_admin, except: [:index, :show]
 
