@@ -7,13 +7,13 @@ class Guitar < ApplicationRecord
     price < 2
   end
 
-  belongs_to :supplier
+  belongs_to :supplier, optional: true
 
   has_many :category_guitars
 
   has_many :categories, through: :category_guitars
 
-  belongs_to :category
+  belongs_to :category, optional: true
 
   has_many :order
 
