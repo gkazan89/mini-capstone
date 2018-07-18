@@ -1,0 +1,6 @@
+<h1>All Guitars</h1>
+<% @guitars.each do |guitar| %>
+ <h2>Name: <%= guitar.name %></h2>
+ <h3>Price: <%= guitar.price %></h3>
+ <p>About: <%= guitar.description %></p>
+<% end %>
