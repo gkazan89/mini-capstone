@@ -32,4 +32,19 @@ class GuitarsController < ApplicationController
     @guitar = Guitar.find_by(id: params[:id])
     render "edit.html.erb"
   end
+
+  def update
+    @guitar = Guitar.find_by(id: params[:id])
+    @guitar.name = params[:name]
+    @guitar.price = params[:price]
+    @guitar.description = params[:description]
+    @guitar.save
+    redirect_to "/guitars/#{@guitar.id}"
+  end
+
+  def destroy
+    @guitar = Guitar.find_by(id: params[:id])
+    @guitar.destroy
+    redirect_to "/guitars"
+  end
 end

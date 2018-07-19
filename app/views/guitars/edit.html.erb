@@ -1,5 +1,6 @@
 <h1>Edit guitar</h1>
-<form action="/guitars/<%= @guitar.id %>" method="patch">
+<form action="/guitars/<%= @guitar.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
   <div>
     Name: <input type="text" name="name" value="<%= @guitar.name %>">
   </div>
