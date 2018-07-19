@@ -27,4 +27,9 @@ class GuitarsController < ApplicationController
   def new
     render "new.html.erb"
   end
+
+  def edit
+    @guitar = Guitar.find_by(id: params[:id])
+    render "edit.html.erb"
+  end
 end

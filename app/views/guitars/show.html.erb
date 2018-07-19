@@ -4,3 +4,4 @@
 <p>About: <%= @guitar.description %></p>
 <img src="<%= @guitar.images.first.url %>">
 <a href="/guitars">Back to all guitars</a>
+<a href="/guitars/<%= @guitar.id %>/edit">Edit guitar</a>

@@ -1,0 +1,13 @@
+<h1>Edit guitar</h1>
+<form action="/guitars/<%= @guitar.id %>" method="patch">
+  <div>
+    Name: <input type="text" name="name" value="<%= @guitar.name %>">
+  </div>
+  <div>
+    Price: <input type="text" name="price" value="<%= @guitar.price %>">
+  </div>
+  <div>
+    Description: <input type="text" name="description" value="<%= @guitar.description %>">
+  </div>
+  <input type="submit" value="Edit Guitar">
+</form>
